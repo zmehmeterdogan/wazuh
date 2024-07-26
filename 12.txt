@@ -1,1 +1,0 @@
-post_bootstrap: psql -c "CREATE ROLE replicator WITH REPLICATION LOGIN PASSWORD 'replicator';"
