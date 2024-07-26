@@ -1,0 +1,36 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://example.com/$1 [L,R=301]
+
+NameVirtualHost *:80
+<VirtualHost *:80>
+   ServerName mysite.example.com
+   Redirect permanent / https://mysite.example.com/
+</VirtualHost>
+
+<VirtualHost _default_:443>
+   ServerName mysite.example.com
+  DocumentRoot /usr/local/apache2/htdocs
+  SSLEngine On
+ # etc...
+</VirtualHost>
+
+1) Enable modules
+sudo a2enmod rewrite
+sudo a2enmod ssl
+2) Edit your site configuration
+Edit file
+/etc/apache2/sites-available/000-default.conf
+The content should be:
+<VirtualHost *:80>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+</VirtualHost>
+<VirtualHost *:443>
+    SSLEngine on
+    SSLCertificateFile    <path to your certificate file>
+    SSLCertificateKeyFile   <path to your private key file>
+    # Rest of your site configuration
+    # ...
+</VirtualHost>
