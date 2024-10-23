@@ -1,1 +1,1 @@
-s.OYpqGfVJQt6DUFgEFJEyPqJ0
+wget https://code.jquery.com/jquery-3.6.0.min.js -O /usr/share/javascript/jquery/jquery.min.js
