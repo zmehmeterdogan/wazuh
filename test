@@ -8,3 +8,14 @@ sudo cp /usr/lib/ruby/2.7.0/rdoc/generator/template/darkfish/js/jquery.js /usr/l
 
 wget https://code.jquery.com/jquery-3.6.0.min.js -O /usr/share/pcsd/public/js/jquery-1.9.1.min.js
 wget https://code.jquery.com/jquery-3.6.0.min.js -O /usr/lib/ruby/2.7.0/rdoc/generator/template/darkfish/js/jquery.js
+
+
+cp /usr/share/pcsd/public/js/jquery-1.9.1.min.js /usr/share/pcsd/public/js/jquery-1.9.1.min.js.bak
+cp /usr/share/pcsd/public/js/jquery-ui-1.10.1.custom.min.js /usr/share/pcsd/public/js/jquery-ui-1.10.1.custom.min.js.bak
+
+
+wget https://code.jquery.com/jquery-3.6.0.min.js -O /usr/share/pcsd/public/js/jquery-1.9.1.min.js
+wget https://code.jquery.com/ui/1.12.1/jquery-ui.min.js -O /usr/share/pcsd/public/js/jquery-ui-1.10.1.custom.min.js
+
+sudo systemctl restart pcsd
+sudo systemctl restart pacemaker
