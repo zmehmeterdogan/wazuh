@@ -1,2 +1,10 @@
 dpkg -S /usr/share/pcsd/public/js/jquery-1.9.1.min.js
 dpkg -S /usr/lib/ruby/2.7.0/rdoc/generator/template/darkfish/js/jquery.js
+
+
+sudo cp /usr/share/pcsd/public/js/jquery-1.9.1.min.js /usr/share/pcsd/public/js/jquery-1.9.1.min.js.bak
+sudo cp /usr/lib/ruby/2.7.0/rdoc/generator/template/darkfish/js/jquery.js /usr/lib/ruby/2.7.0/rdoc/generator/template/darkfish/js/jquery.js.bak
+
+
+wget https://code.jquery.com/jquery-3.6.0.min.js -O /usr/share/pcsd/public/js/jquery-1.9.1.min.js
+wget https://code.jquery.com/jquery-3.6.0.min.js -O /usr/lib/ruby/2.7.0/rdoc/generator/template/darkfish/js/jquery.js
