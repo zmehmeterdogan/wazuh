@@ -49,3 +49,8 @@ sudo systemctl restart haproxy
     # Clickjacking (X-Frame-Options) Zafiyeti için
     Header always set X-Frame-Options "DENY"
 
+
+header_remove('X-Frame-Options');
+header('X-Frame-Options: DENY');
+
+
