@@ -129,4 +129,33 @@ make
 sudo make install
 
 
+sudo nano /etc/systemd/system/sshd.service
+
+[Unit]
+Description=OpenSSH server daemon
+Documentation=man:sshd(8) man:sshd_config(5)
+After=network.target sshd-keygen.target
+Wants=sshd-keygen.target
+
+[Service]
+ExecStart=/usr/sbin/sshd -D
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartSec=42s
+
+[Install]
+WantedBy=multi-user.target
+
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable sshd
+sudo systemctl start sshd
+
+sudo systemctl status sshd
+
+
+
+
 
