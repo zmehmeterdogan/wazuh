@@ -22,3 +22,10 @@ sudo systemctl restart haproxy
 
 Header always set X-Frame-Options "DENY"
 Header always set Content-Security-Policy "frame-ancestors 'none'"
+
+
+ps aux | grep nginx
+ps aux | grep apache2
+ps aux | grep httpd
+sudo netstat -tulnp | grep :443
+sudo netstat -tulnp | grep :7000
