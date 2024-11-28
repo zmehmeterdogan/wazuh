@@ -29,3 +29,20 @@ ps aux | grep apache2
 ps aux | grep httpd
 sudo netstat -tulnp | grep :443
 sudo netstat -tulnp | grep :7000
+
+
+http-response set-header X-Frame-Options DENY
+http-response set-header Content-Security-Policy "frame-ancestors 'none'"
+
+
+http-response set-header X-Frame-Options DENY
+http-response set-header Content-Security-Policy "frame-ancestors 'none'"
+
+
+http-response set-header X-Frame-Options DENY
+http-response set-header Content-Security-Policy "frame-ancestors 'none'"
+
+
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+sudo systemctl restart haproxy
+
