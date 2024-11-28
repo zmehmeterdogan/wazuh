@@ -122,5 +122,11 @@ sudo apt remove --purge openssh-server -y
 sudo rm -f /usr/sbin/sshd.old
 
 
+tar -xzf openssh-9.3p1.tar.gz
+cd openssh-9.3p1
+./configure --prefix=/usr --sysconfdir=/etc/ssh --with-privsep-path=/var/lib/sshd
+make
+sudo make install
+
 
 
