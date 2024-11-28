@@ -56,3 +56,8 @@ header('X-Frame-Options: DENY');
 http-response set-header Content-Security-Policy "default-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; frame-ancestors 'none'; object-src 'none';"
 
 
+ls /etc/ssh/sshd_config.d/
+nano /etc/ssh/sshd_config.d/<dosya>
+
+
+
