@@ -105,5 +105,6 @@ ssh -V
 sshd -V
 
 
+sudo strace -e openat /usr/sbin/sshd -T 2>&1 | grep sshd_config
 
 
