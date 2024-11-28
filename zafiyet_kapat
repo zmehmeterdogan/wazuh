@@ -112,3 +112,15 @@ ls -l /usr/sbin/sshd
 ls -l /usr/local/sbin/sshd
 
 
+sudo mv /usr/sbin/sshd /usr/sbin/sshd.old
+sudo cp /usr/local/sbin/sshd /usr/sbin/sshd
+sudo chmod 755 /usr/sbin/sshd
+sudo systemctl restart sshd
+/usr/sbin/sshd -V
+
+sudo apt remove --purge openssh-server -y
+sudo rm -f /usr/sbin/sshd.old
+
+
+
+
