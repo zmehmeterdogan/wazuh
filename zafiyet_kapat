@@ -160,3 +160,22 @@ sudo systemctl status sshd
 sudo useradd -r -d /var/run/sshd -s /usr/sbin/nologin sshd
 
 
+sudo mv /usr/sbin/sshd /usr/sbin/sshd.old
+sudo cp /usr/local/sbin/sshd /usr/sbin/sshd
+sudo chmod 755 /usr/sbin/sshd
+
+/usr/sbin/sshd -t
+
+sudo systemctl restart sshd
+sudo systemctl status sshd
+
+sudo ps aux | grep sshd
+/usr/sbin/sshd -V
+
+
+sudo /usr/sbin/sshd -p 2222
+ssh -p 2222 user@host
+
+
+
+
