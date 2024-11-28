@@ -107,4 +107,8 @@ sshd -V
 
 sudo strace -e openat /usr/sbin/sshd -T 2>&1 | grep sshd_config
 
+which sshd
+ls -l /usr/sbin/sshd
+ls -l /usr/local/sbin/sshd
+
 
