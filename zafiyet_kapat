@@ -10,3 +10,7 @@ sudo systemctl restart apache2
 sudo apachectl configtest
 
 sudo systemctl restart apache2
+
+
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+sudo systemctl restart haproxy
