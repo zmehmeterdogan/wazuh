@@ -74,3 +74,6 @@ Ciphers -chacha20-poly1305,-cbc
 MACs -hmac-sha1,-hmac-md5,-hmac-md5-96
 KexAlgorithms -diffie-hellman-group1-sha1,-diffie-hellman-group14-sha1,-diffie-hellman-group-exchange-sha256
 
+
+cat ~/.ssh/config
+
