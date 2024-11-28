@@ -87,3 +87,23 @@ Ciphers -chacha20-poly1305,-cbc
 MACs -hmac-sha1,-hmac-md5,-hmac-md5-96
 KexAlgorithms -diffie-hellman-group1-sha1,-diffie-hellman-group14-sha1,-diffie-hellman-group-exchange-sha1
 
+
+sudo apt install build-essential zlib1g-dev libssl-dev
+wget https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.3p1.tar.gz
+
+tar -xzf openssh-9.3p1.tar.gz
+cd openssh-9.3p1
+./configure
+make
+sudo make install
+
+sshd -V
+
+sudo systemctl restart sshd
+
+ssh -V
+sshd -V
+
+
+
+
