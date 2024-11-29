@@ -182,4 +182,6 @@ sudo apt install --only-upgrade openssh-client openssh-server openssh-sftp-serve
 dpkg -l | grep openssh
 /usr/sbin/sshd -V
 
+sudo rm -f /usr/local/sbin/sshd
+sudo rm -rf /usr/local/share/man/man8/sshd.8.gz
 
