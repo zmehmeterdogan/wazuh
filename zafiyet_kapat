@@ -177,5 +177,9 @@ sudo /usr/sbin/sshd -p 2222
 ssh -p 2222 user@host
 
 
+sudo apt install --only-upgrade openssh-client openssh-server openssh-sftp-server
+
+dpkg -l | grep openssh
+/usr/sbin/sshd -V
 
 
