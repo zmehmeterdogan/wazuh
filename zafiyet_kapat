@@ -185,3 +185,6 @@ dpkg -l | grep openssh
 sudo rm -f /usr/local/sbin/sshd
 sudo rm -rf /usr/local/share/man/man8/sshd.8.gz
 
+
+echo 'export PATH=/usr/sbin:$PATH' >> ~/.bashrc
+source ~/.bashrc
