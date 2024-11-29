@@ -185,6 +185,18 @@ dpkg -l | grep openssh
 sudo rm -f /usr/local/sbin/sshd
 sudo rm -rf /usr/local/share/man/man8/sshd.8.gz
 
+echo $PATH
+
+/usr/sbin/sshd -v
+
+sudo systemctl restart sshd
+
+which sshd
+
 
 echo 'export PATH=/usr/sbin:$PATH' >> ~/.bashrc
 source ~/.bashrc
+
+
+sudo systemctl restart sshd
+sudo systemctl status sshd
