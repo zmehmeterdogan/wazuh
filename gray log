@@ -1,23 +1,2 @@
-curl -u monitoringuser:SnpdVPEtEimsQv1* \
-"http://10.1.18.61:9000/api/search/universal/relative?query=statusCode%3A500&range=300&limit=10"
-
-
-
-
-curl -v -u monitoringuser:SnpdVPEtEimsQv1* \
-"http://10.1.18.61:9000/api/search/universal/relative?query=statusCode%3A500&range=300&limit=10"
-
-
-import requests
-
-url = "http://10.1.18.61:9000/api/search/universal/relative"
-auth = ("monitoringuser", "SnpdVPEtEimsQv1")
-params = {"query": "statusCode:500", "range": 300, "limit": 10}
-
-response = requests.get(url, auth=auth, params=params)
-
-print(f"HTTP Status Code: {response.status_code}")
-print(response.text)
-
-curl -v -H "Authorization: Basic $(echo -n 'monitoringuser:SnpdVPEtEimsQv1' | base64)" \
-"http://10.1.18.61:9000/api/search/universal/relative?query=statusCode%3A500&range=300&limit=10"
+curl -u monitoringuser:SnpdVPEtEimsQv1 \
+"http://10.1.18.61:9000/api/search/universal/absolute?query=statusCode%3A500&from=2024-12-18T00:00:00.000Z&to=2024-12-18T23:59:59.000Z&limit=10"
