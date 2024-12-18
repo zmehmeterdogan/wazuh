@@ -51,3 +51,9 @@ curl -u monitoringuser:SnpdVPEtEimsQv1 "http://10.1.18.61:9000/api/search/univer
 
 http://10.1.38.81:9000/api/search/universal/absolute?query=updateDatabasePackageLinkedApplicationPackage start process&from=2024-01-01T00:00:00.000Z&to=2030-01-01T00:00:00.000Z
 
+curl -u monitoringuser:SnpdVPEtEimsQv1 "http://10.1.18.61:9000/api/search/universal/absolute?query=status:500&from=2024-12-18T00:00:00.000Z&to=2024-12-18T23:59:59.000Z&limit=10"
+
+curl -u monitoringuser:SnpdVPEtEimsQv1 "http://10.1.18.61:9000/api/search/universal/absolute?query=status:500&from=2024-12-18T00:00:00.000Z&to=2024-12-18T23:59:59.000Z&limit=10"
+
+
+
