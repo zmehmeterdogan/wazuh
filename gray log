@@ -8,3 +8,5 @@ curl -u monitoringuser:SnpdVPEtEimsQv1 \
 curl -u monitoringuser:SnpdVPEtEimsQv1 \
 "http://10.1.18.61:9000/api/search/universal/absolute?query=http_status%3A500&from=2024-12-18T00:00:00.000Z&to=2024-12-18T23:59:59.000Z&limit=10"
 
+curl -u monitoringuser:SnpdVPEtEimsQv1 \
+"http://10.1.18.61:9000/api/search/universal/relative?query=%5C%22statusCode%5C%22%3A%5C%22500%5C%22&range=300&limit=10"
