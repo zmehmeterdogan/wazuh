@@ -1,2 +1,10 @@
 curl -u monitoringuser:SnpdVPEtEimsQv1 \
 "http://10.1.18.61:9000/api/search/universal/absolute?query=statusCode%3A500&from=2024-12-18T00:00:00.000Z&to=2024-12-18T23:59:59.000Z&limit=10"
+
+
+curl -u monitoringuser:SnpdVPEtEimsQv1 \
+"http://10.1.18.61:9000/api/search/universal/absolute?query=statusCode%3A500&from=2024-12-17T00:00:00.000Z&to=2024-12-18T23:59:59.000Z&limit=10"
+
+curl -u monitoringuser:SnpdVPEtEimsQv1 \
+"http://10.1.18.61:9000/api/search/universal/absolute?query=http_status%3A500&from=2024-12-18T00:00:00.000Z&to=2024-12-18T23:59:59.000Z&limit=10"
+
