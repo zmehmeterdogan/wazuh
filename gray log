@@ -1,0 +1,44 @@
+import requests
+import json
+
+# Graylog API Ayarları
+GRAYLOG_URL = "http://10.1.18.61:9000/api/search/universal/relative"
+GRAYLOG_USERNAME = "monitoringuser"
+GRAYLOG_PASSWORD = "SnpdVPEtEimsQv1"
+
+# Sorgu Parametreleri
+QUERY_PARAMS = {
+    "query": "status:500",  # HTTP 500 durum kodu içeren loglar
+    "range": 300,           # Son 5 dakika (300 saniye)
+    "limit": 10             # Maksimum 10 sonuç
+}
+
+# API Sorgusu
+def fetch_graylog_logs():
+    try:
+        response = requests.get(
+            GRAYLOG_URL,
+            auth=(GRAYLOG_USERNAME, GRAYLOG_PASSWORD),
+            params=QUERY_PARAMS,
+            timeout=10
+        )
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Graylog API isteği başarısız oldu: {e}")
+        return None
+
+# Log İşleme
+def process_logs(logs):
+    if logs and logs.get("total_results", 0) > 0:
+        print("500 durum kodu bulundu!")
+        return 1
+    else:
+        print("Her şey yolunda.")
+        return 0
+
+# Ana Çalıştırma
+if __name__ == "__main__":
+    logs = fetch_graylog_logs()
+    result = process_logs(logs)
+    print(result)  # Zabbix için sonuç döner
