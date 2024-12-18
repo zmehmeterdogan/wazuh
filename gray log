@@ -1,2 +1,8 @@
 curl -u monitoringuser:SnpdVPEtEimsQv1* \
 "http://10.1.18.61:9000/api/search/universal/relative?query=statusCode%3A500&range=300&limit=10"
+
+
+
+
+curl -v -u monitoringuser:SnpdVPEtEimsQv1* \
+"http://10.1.18.61:9000/api/search/universal/relative?query=statusCode%3A500&range=300&limit=10"
