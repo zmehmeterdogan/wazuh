@@ -6,7 +6,8 @@ grep "2024-12-17T17:0[0-9]" /path/to/grafana.log | grep "uname=emin"
 grep "2024-12-17T16:3[0-9]" /path/to/grafana.log | grep "uname=emin"
 grep "2024-12-17T17:0[0-9]" /path/to/grafana.log | grep "uname=emin"
 
-
+mkdir -p /var/log/grafana_backup
+cp /var/log/grafana/* /var/log/grafana_backup/
 
 
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
