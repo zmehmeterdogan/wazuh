@@ -1,3 +1,5 @@
+https://www.freetestapi.com/api/v1/weathers?sort=name&order=desc
+
 https://harbor.emlakkatilim.com.tr/api/v2.0/statistics
 
 grep "2024-12-17T16:" /path/to/grafana.log | grep "2024-12-17T17:" | grep "uname=emin"
